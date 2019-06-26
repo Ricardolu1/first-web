@@ -17,7 +17,7 @@ hr {
 }
 h1{
   font-family: 'Courier New', Courier, monospace;
-  font-weight: 700;
+  font-weight: 1000;
 }
 .clearfix::after {
   content: "";
@@ -60,7 +60,7 @@ h1{
   display: block;
 }
 .topNavBar nav > ul > li > a:hover {
-  border-bottom: 3px solid #e06567;
+  border-bottom: 3px solid #0a5598;
 }
 .topNavBar .logo {
   font-size: 24px;
@@ -70,7 +70,7 @@ h1{
 }
 .topNavBar .logo .rs {
   margin-right: 12px;
-  color: #e6686a;
+  color: #0a5598;
 }
 .topNavBar .logo .card {
   margin-right: 12px;
@@ -94,7 +94,7 @@ h1{
   background-color: #fff;
 }
 .userCard .welcome {
-  background: #e6686a;
+  background: #0a5598;
   color: white;
   display: inline-block;
   padding: 4px 16px;
@@ -107,7 +107,7 @@ h1{
   border: 10px solid transparent;
   height: 0px;
   width: 0px;
-  border-left-color: #e6686a;
+  border-left-color: #0a5598;
   border-top-width: 0px;
   position: absolute;
   left: 4px;
@@ -148,7 +148,7 @@ h1{
   color:#9da0a7;
 }
 .userCard>footer.media{
-  background: #e6686a;
+  background: #0a5598;
   text-align: center;
 
 }
@@ -161,7 +161,7 @@ h1{
   margin: 20px 40px;
 }
 .userCard>footer.media>a:hover{
-  background: #cf5d5f;
+  background: #224c72;
 
 }
 .userCard svg{
