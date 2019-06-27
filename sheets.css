@@ -16,8 +16,15 @@ hr {
   border-top: 1px solid #dedede;
 }
 h1{
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 1000;
+  font-family:kai;
+  font-weight: normal;
+}
+body>main{
+  margin-top: -340px;
+}
+ol,ul{
+  list-style: none;
+
 }
 .clearfix::after {
   content: "";
@@ -69,11 +76,11 @@ h1{
   padding-bottom: 3.4px;
 }
 .topNavBar .logo .rs {
-  margin-right: 12px;
+  margin-right: 4px;
   color: #0a5598;
 }
 .topNavBar .logo .card {
-  margin-right: 12px;
+  margin-right: 4px;
   color: #9a9da2;
 }
 .banner {
@@ -92,6 +99,8 @@ h1{
   margin-left: auto;
   margin-right: auto;
   background-color: #fff;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+
 }
 .userCard .welcome {
   background: #0a5598;
@@ -118,7 +127,7 @@ h1{
 }
 .userCard .text {
   float: left;
-  margin-left: 65px;
+  margin-left: 100px;
   width: 470px;
   /* border:1px solid red; */
 }
@@ -170,4 +179,61 @@ h1{
   fill: white;
   vertical-align: top;
 }
+body>main .downloadResume{
+  font-size: 14px;
+  line-height: 16px;
+  padding: 21px 55px;
+  border:1px solid #CDCFD1;
+  display: inline-block;
+  background: #efefef;
+  border-radius: 2px;
+  color:#3d4451;
+  font-weight: bold;
+  margin:32px 0; 
+  transition: box-shadow 1.5s;
 
+
+}
+body>main .downloadResume-wrapper{
+  text-align: center;
+
+}
+body>main .downloadResume:hover{
+  box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.2);
+}
+.selfIntroduction{
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: kai;
+  line-height: 1.8;
+  font-size: 18px;
+}
+section.skills{
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+section.skills>h2{
+  text-align: center;
+  color:#3d4451;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+section.skills>ol{
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  background: #fff;
+}
+section.skills .progressBar{
+  height: 3px;
+  border:1px solid red;
+}
+/* section.skills .progressBar .progress{
+  background: red;
+  width:50%;
+  height: 3px;
+} */
+section.skill .progressBar .progress
