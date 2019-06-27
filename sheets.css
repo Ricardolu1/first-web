@@ -26,6 +26,11 @@ ol,ul{
   list-style: none;
 
 }
+h1,h2,h3,h4,h5,h6{
+  font-weight: normal;
+}
+
+
 .clearfix::after {
   content: "";
   display: block;
@@ -94,7 +99,6 @@ ol,ul{
   background-color: rgba(0, 0, 0, 0.8);
 }
 .userCard {
-  /* border: 1px solid red; */
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
@@ -129,7 +133,6 @@ ol,ul{
   float: left;
   margin-left: 100px;
   width: 470px;
-  /* border:1px solid red; */
 }
 .userCard .text hr {
   margin: 20px 0;
@@ -144,9 +147,6 @@ ol,ul{
 .userCard dl dd {
   float: left;
   padding: 10px 0;
-}
-.userCard dl {
-  /* border:1px solid red; */
 }
 .userCard dl dt {
   width: 30%;
@@ -225,15 +225,34 @@ section.skills>h2{
 }
 section.skills>ol{
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
-  background: #fff;
+  background:white;
+  padding: 42px 50px 10px;
+  margin-top: 30px;
+}
+section.skills>ol>li{
+  float: left;
+  width: 47%;
+
+}
+section.skills>ol>li:nth-child(even){
+  float: right;
+
+}
+section.skills>h3{
+  font-size: 14px;
+  line-height: 1.1;
+  padding-right: 40px;
 }
 section.skills .progressBar{
-  height: 3px;
-  border:1px solid red;
+  height: 5px;
+  background: #a7d0f5;
+  border-radius: 3px;
+  margin: 4px 0 40px;
 }
-/* section.skills .progressBar .progress{
-  background: red;
-  width:50%;
-  height: 3px;
-} */
-section.skill .progressBar .progress
+
+section.skills .progressBar .progress{
+  height: 100%;
+  background: #0a5598;
+  width: 70%;
+  border-radius: 3px;
+}
