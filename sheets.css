@@ -191,7 +191,7 @@ body > main .downloadResume {
   color: #3d4451;
   font-weight: bold;
   margin: 32px 0;
-  transition: box-shadow 0.8s;
+  transition: box-shadow 0.4s;
 }
 body > main .downloadResume-wrapper {
   text-align: center;
