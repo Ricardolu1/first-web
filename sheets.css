@@ -15,21 +15,25 @@ hr {
   border: none;
   border-top: 1px solid #dedede;
 }
-h1{
-  font-family:kai;
+h1 {
+  font-family: kai;
   font-weight: normal;
 }
-body>main{
+body > main {
   margin-top: -340px;
 }
-ol,ul{
+ol,
+ul {
   list-style: none;
-
 }
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
 }
-
 
 .clearfix::after {
   content: "";
@@ -104,7 +108,6 @@ h1,h2,h3,h4,h5,h6{
   margin-right: auto;
   background-color: #fff;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
-
 }
 .userCard .welcome {
   background: #0a5598;
@@ -154,54 +157,49 @@ h1,h2,h3,h4,h5,h6{
 }
 .userCard dl dd {
   width: 70%;
-  color:#9da0a7;
+  color: #9da0a7;
 }
-.userCard>footer.media{
+.userCard > footer.media {
   background: #0a5598;
   text-align: center;
-
 }
-.userCard>footer.media>a{
+.userCard > footer.media > a {
   display: inline-block;
   width: 20px;
   line-height: 20px;
-  padding:5px 5px;
+  padding: 5px 5px;
   border-radius: 50%;
   margin: 20px 40px;
 }
-.userCard>footer.media>a:hover{
+.userCard > footer.media > a:hover {
   background: #224c72;
-
 }
-.userCard svg{
+.userCard svg {
   width: 20px;
   height: 20px;
   fill: white;
   vertical-align: top;
 }
-body>main .downloadResume{
+body > main .downloadResume {
   font-size: 14px;
   line-height: 16px;
   padding: 21px 55px;
-  border:1px solid #CDCFD1;
+  border: 1px solid #cdcfd1;
   display: inline-block;
   background: #efefef;
   border-radius: 2px;
-  color:#3d4451;
+  color: #3d4451;
   font-weight: bold;
-  margin:32px 0; 
+  margin: 32px 0;
   transition: box-shadow 0.8s;
-
-
 }
-body>main .downloadResume-wrapper{
+body > main .downloadResume-wrapper {
   text-align: center;
-
 }
-body>main .downloadResume:hover{
-  box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.2);
+body > main .downloadResume:hover {
+  box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2);
 }
-.selfIntroduction{
+.selfIntroduction {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
@@ -211,111 +209,104 @@ body>main .downloadResume:hover{
   font-size: 18px;
 }
 section.skills,
-section.portfolio{
+section.portfolio {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;
 }
-section.skills>h2,
-section.portfolio>h2{
+section.skills > h2,
+section.portfolio > h2 {
   text-align: center;
-  color:#3d4451;
+  color: #3d4451;
   font-size: 34px;
   line-height: 1.2;
   font-weight: 600;
 }
-section.skills>ol{
+section.skills > ol {
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
-  background:white;
+  background: white;
   padding: 42px 50px 10px;
   margin-top: 30px;
 }
-section.skills>ol>li{
+section.skills > ol > li {
   float: left;
   width: 47%;
-
 }
-section.skills>ol>li:nth-child(even){
+section.skills > ol > li:nth-child(even) {
   float: right;
-
 }
-section.skills>h3{
+section.skills > h3 {
   font-size: 14px;
   line-height: 1.1;
   padding-right: 40px;
 }
-section.skills .progressBar{
+section.skills .progressBar {
   height: 5px;
   background: #a7d0f5;
   border-radius: 3px;
   margin: 4px 0 40px;
 }
 
-section.skills .progressBar .progress{
+section.skills .progressBar .progress {
   height: 100%;
   background: #0a5598;
   width: 70%;
   border-radius: 3px;
 }
-section.portfolio>nav>ol>li{
+section.portfolio > nav > ol > li {
   float: left;
   margin-left: 40px;
   cursor: pointer;
 }
-section.portfolio>nav>ol{
+section.portfolio > nav > ol {
   display: inline-block;
   vertical-align: top;
-
 }
-section.portfolio>nav{
+section.portfolio > nav {
   text-align: center;
   display: inline-block;
   vertical-align: top;
   margin-top: 32px;
-
 }
-section.portfolio>nav>ol>li:nth-child(1){
+section.portfolio > nav > ol > li:nth-child(1) {
   margin-left: 0;
 }
-section.portfolio>nav>.bar{
+section.portfolio > nav > .bar {
   background: white;
   height: 5px;
   margin-top: 5px;
   border-radius: 2px;
   margin-bottom: 28px;
 }
-section.portfolio{
+section.portfolio {
   text-align: center;
 }
-section.portfolio>nav>.bar .bar-inner{
+section.portfolio > nav > .bar .bar-inner {
   height: 100%;
   background: #0a5598;
   width: 10%;
   border-radius: 2px;
   transition: 0.3s;
-
 }
-section.portfolio>nav>.bar.state-1 .bar-inner{
+section.portfolio > nav > .bar.state-1 .bar-inner {
   margin-left: 0;
-  width: 50px;;
+  width: 50px;
 }
-section.portfolio>nav>.bar.state-2 .bar-inner{
-
+section.portfolio > nav > .bar.state-2 .bar-inner {
   margin-left: 65px;
   width: 50px;
-
 }
-section.portfolio>nav>.bar.state-3 .bar-inner{
+section.portfolio > nav > .bar.state-3 .bar-inner {
   margin-left: 140px;
   width: 96px;
 }
-section.portfolio .works{
+section.portfolio .works {
   position: relative;
   margin-bottom: 100px;
 }
 
 section.portfolio .works .big,
-section.portfolio .works .small{
+section.portfolio .works .small {
   position: absolute;
 }
