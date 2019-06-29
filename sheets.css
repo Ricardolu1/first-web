@@ -304,17 +304,15 @@ section.portfolio > nav > .bar.state-3 .bar-inner {
 section.portfolio .works {
   position: relative;
   margin-bottom: 100px;
-  border: 1px solid red;
   line-height: 0;
 }
 
 section.portfolio .works .big,
 section.portfolio .works .small {
   position: absolute;
-  border: 1px solid red;
 }
 section.portfolio .works .big:hover,
 section.portfolio .works .small:hover {
-  box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.2s;
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s;
 }
