@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./sheets.css" />
     <link rel="stylesheet" href="./loading.css">
+    <link rel="stylesheet" href="./main.css"/>
     <script src="//at.alicdn.com/t/font_1261257_ewtw0vajrn.js"></script>
     <style type="text/css">
       .icon {
@@ -15,12 +15,26 @@
         fill: currentColor;
         overflow: hidden;
       }
+      .site-welcome{
+        display: none;
+        top:0; left: 0; width: 100%; height: 100%;
+        background: #888;
+        position: fixed;
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+      }
+      .site-welcome.active{
+        display: flex;
+      }
     </style>
     <title>ycy的个人简历</title>
   </head>
 
   <body>
-    <div class="loading"></div>
+    <div id="siteWelcome" class="site-welcome active">
+        <div class="loading"></div>
+    </div>
     <div class="topNavBar">
       <div class="topNavBar-inner clearfix">
         <a class="logo" href="#" alt="logo" style="float:left;">
@@ -183,5 +197,8 @@
         </div>
       </div>
     </section>
+    <script>
+      siteWelcome.classList.remove('active')
+    </script>
   </body>
 </html>
