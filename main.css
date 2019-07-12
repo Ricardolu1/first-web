@@ -22,24 +22,18 @@ h1 {
 body > main {
   margin-top: -340px;
 }
-ol,
-ul {
+ol,ul {
   list-style: none;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
 }
-
 .clearfix::after {
   content: "";
   display: block;
   clear: both;
 }
+
 .topNavBar {
   padding-top: 21px;
   padding-bottom: 21px;
@@ -47,6 +41,16 @@ h6 {
   top: 0px;
   left: 0px;
   width: 100%;
+  transition: all 0.5s;
+  color: #b7b7b7;
+}
+.topNavBar.sticky{
+  background:white;
+  padding: 10px 0;
+  z-index: 1;
+  box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);
+  color: #3d4454;
+  
 }
 .topNavBar-inner {
   padding: 0 16px;
@@ -64,19 +68,47 @@ h6 {
   float: left;
   margin-left: 17px;
   margin-right: 17px;
+  position: relative;
 }
 .topNavBar nav > ul > li > a {
   font-size: 12px;
-  color: #b7b7b7;
+  color: inherit;
   font-weight: bold;
   border-bottom: 3px solid transparent;
   border-top: 3px solid transparent;
   padding-top: 5px;
   padding-bottom: 5px;
   display: block;
+  position: relative;
 }
-.topNavBar nav > ul > li > a:hover {
-  border-bottom: 3px solid #0a5598;
+.topNavBar nav > ul > li > a:hover::after {
+  content:'';
+  display: block;
+  position: absolute;
+  top:100%;
+  left:0;
+  width: 100%;
+  background: #0a5598;
+  height: 3px;
+  animation: menuSlide 0.3s;
+}
+@keyframes menuSlide{
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 100%;
+  }
+}
+.topNavBar .submenu{
+  display: none;
+  position: absolute;
+  left: 0;
+  top:100%;
+}
+.topNavBar .submenu.active{
+  display: block;
+  
 }
 .topNavBar .logo {
   font-size: 24px;
