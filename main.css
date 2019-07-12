@@ -41,7 +41,7 @@ h1,h2,h3,h4,h5,h6 {
   top: 0px;
   left: 0px;
   width: 100%;
-  transition: all 0.5s;
+  transition: all 1s;
   color: #b7b7b7;
 }
 .topNavBar.sticky{
@@ -109,6 +109,9 @@ h1,h2,h3,h4,h5,h6 {
 .topNavBar .submenu.active{
   display: block;
   
+}
+.topNavBar .submenu>li{
+  white-space: nowrap;
 }
 .topNavBar .logo {
   font-size: 24px;
