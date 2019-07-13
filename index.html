@@ -213,7 +213,7 @@
     <script>
       setTimeout(function () {
         siteWelcome.classList.remove('active')
-      }, 1500);
+      }, 500);
       
       window.onscroll=function() {
         if (scrollY>0) {
@@ -226,13 +226,11 @@
       for (let i = 0; i < liTags.length; i++) {
         liTags[i].onmouseenter=function(x) {
           let li=x.currentTarget
-          let son=li.getElementsByTagName('ul')[0]
-          son.classList.add('active')
+          li.classList.add('active')
         }
         liTags[i].onmouseleave=function(x) {
           let li=x.currentTarget
-          let son=li.getElementsByTagName('ul')[0]
-          son.classList.remove('active')
+          li.classList.remove('active')
         }
       }
     </script>
