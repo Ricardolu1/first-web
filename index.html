@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./loading.css">
-    <link rel="stylesheet" href="./main.css"/>
+    <link rel="stylesheet" href="./loading.css" />
+    <link rel="stylesheet" href="./main.css" />
     <script src="//at.alicdn.com/t/font_1261257_ewtw0vajrn.js"></script>
+    <script src="https://cdn.bootcss.com/tween.js/r14/Tween.min.js"></script>
     <style type="text/css">
       .icon {
         width: 1em;
@@ -15,14 +16,13 @@
         fill: currentColor;
         overflow: hidden;
       }
-      
     </style>
     <title>ycy的个人简历</title>
   </head>
 
   <body>
     <div id="siteWelcome" class="site-welcome active">
-        <div class="loading"></div>
+      <div class="loading"></div>
     </div>
     <div id="topNavBar" class="topNavBar">
       <div class="topNavBar-inner clearfix">
@@ -41,18 +41,18 @@
             <li class="menuTrigger">
               <a href="#siteWorks">作品</a>
               <ul class="submenu">
-                  <li>作品1</li>
-                  <li>作品2</li>
-                  <li>作品3</li>
-                </ul>
+                <li>作品1</li>
+                <li>作品2</li>
+                <li>作品3</li>
+              </ul>
             </li>
             <li class="menuTrigger">
               <a href="#">博客</a>
               <ul class="submenu">
-                  <li>博客1</li>
-                  <li>博客2</li>
-                  <li>博客3</li>
-                </ul>
+                <li>博客1</li>
+                <li>博客2</li>
+                <li>博客3</li>
+              </ul>
             </li>
             <li>
               <a href="#">日历</a>
@@ -115,9 +115,15 @@
         </footer>
       </div>
       <p class="downloadResume-wrapper">
-        <a class="downloadResume" href="./img/resume.pdf" target="_blank" download>下载 PDF 简历</a>
+        <a
+          class="downloadResume"
+          href="./img/resume.pdf"
+          target="_blank"
+          download
+          >下载 PDF 简历</a
+        >
       </p>
-     
+
       <p class="selfIntroduction">
         余晨阳，毕业于海南大学，想从事一份前端开发工作~
       </p>
@@ -178,85 +184,97 @@
     <section id="siteWorks" class="portfolio">
       <h2>作品集</h2>
       <nav>
-          <ol class="clearfix">
-            <li id="portfolio1">所有</li>
-            <li id="portfolio2">框架</li>
-            <li id="portfolio3">原生JS&amp;CSS</li>
-          </ol>
-          <div id="portfolioBar" class="bar state-1">
-            <div class="bar-inner"></div>
-          </div>
-         <script>
-          portfolio1.onclick=function (){
-            portfolioBar.className="bar state-1"
+        <ol class="clearfix">
+          <li id="portfolio1">所有</li>
+          <li id="portfolio2">框架</li>
+          <li id="portfolio3">原生JS&amp;CSS</li>
+        </ol>
+        <div id="portfolioBar" class="bar state-1">
+          <div class="bar-inner"></div>
+        </div>
+        <script>
+          portfolio1.onclick = function() {
+            portfolioBar.className = "bar state-1"
           }
-          portfolio2.onclick=function (){
-            portfolioBar.className="bar state-2"
+          portfolio2.onclick = function() {
+            portfolioBar.className = "bar state-2"
           }
-          portfolio3.onclick=function (){
-            portfolioBar.className="bar state-3"
+          portfolio3.onclick = function() {
+            portfolioBar.className = "bar state-3"
           }
-         </script>
+        </script>
       </nav>
       <div class="works" style="height: 597px;">
         <div class="big" style="top:0; left: 0;">
-          <img src="./img/1.jpg" alt="作品1">
+          <img src="./img/1.jpg" alt="作品1" />
         </div>
         <div class="small" style="top:0; left: 645px;">
-          <img src="./img/2.jpg" alt="作品2">
+          <img src="./img/2.jpg" alt="作品2" />
         </div>
         <div class="small" style="top:312px; left: 645px;">
-            <img src="./img/3.jpg" alt="作品3">
+          <img src="./img/3.jpg" alt="作品3" />
         </div>
       </div>
     </section>
     <script>
-      setTimeout(function () {
-        siteWelcome.classList.remove('active')
-      }, 500);
-      
-      window.onscroll=function() {
-        if (scrollY>0) {
-          topNavBar.classList.add('sticky')
-        }else{
-          topNavBar.classList.remove('sticky')
+      setTimeout(function() {
+        siteWelcome.classList.remove("active")
+      }, 500)
+
+      window.onscroll = function() {
+        if (scrollY > 0) {
+          topNavBar.classList.add("sticky")
+        } else {
+          topNavBar.classList.remove("sticky")
         }
       }
-      let liTags=document.getElementsByClassName('menuTrigger')
+      let liTags = document.getElementsByClassName("menuTrigger")
       for (let i = 0; i < liTags.length; i++) {
-        liTags[i].onmouseenter=function(x) {
-          let li=x.currentTarget
-          li.classList.add('active')
+        liTags[i].onmouseenter = function(x) {
+          let li = x.currentTarget
+          li.classList.add("active")
         }
-        liTags[i].onmouseleave=function(x) {
-          let li=x.currentTarget
-          li.classList.remove('active')
+        liTags[i].onmouseleave = function(x) {
+          let li = x.currentTarget
+          li.classList.remove("active")
         }
       }
-      let aTags=document.querySelectorAll('nav.menu > ul > li > a')
+
+      function animate(time) {
+        requestAnimationFrame(animate)
+        TWEEN.update(time)
+      }
+
+      requestAnimationFrame(animate)
+
+      let aTags = document.querySelectorAll("nav.menu > ul > li > a")
       for (let i = 0; i < aTags.length; i++) {
-        aTags[i].onclick=function(x) {
+        aTags[i].onclick = function(x) {
           x.preventDefault()
-          let a =x.currentTarget
-          let href=a.getAttribute('href')//得到的是#siteAbout
-          let element=document.querySelector(href)//这个api已收藏
-          let top =element.offsetTop//这个offset属性还挺重要的，在mdn上没有找到
-          let n=30//一共动多少次
-          let interval = 500/n
+          let a = x.currentTarget
+          let href = a.getAttribute("href") //得到的是#siteAbout
+          let element = document.querySelector(href) //这个api已收藏
+          let top = element.offsetTop //这个offset属性还挺重要的，在mdn上没有找到
+
           let currentTop = window.scrollY
-          let targetTop = top-80
-          let perDistance = (targetTop - currentTop)/n
-          let count= 0
-          let id= setInterval(() => {
-            if(count===n){ 
-              window.clearInterval(id)
-              return
-              } 
-            count=count+1
-            window.scrollTo(0, currentTop + count * perDistance)//这些api都要自己去了解的
-          }, interval);
+          let targetTop = top - 80
+          let distance = targetTop - currentTop
+          var coords = { y: currentTop } //初始位置
+          var t= Math.abs((distance / 100) * 300)//距离可以是负数，时间不能是负数，这里有bug
+          if (t>500) {
+            t=500//时间不能超过500毫秒
+          }
+          var tween = new TWEEN.Tween(coords)
+            .to({ y: targetTop }, t) //结束位置，时间 距离是100的几倍我就用多少个0.3秒。这样长距离移动看上去就没有那么快了，不要所有的距离都是一秒移动完。时间和距离是相关的，看上去更好
+            .easing(TWEEN.Easing.Quadratic.InOut)
+            .onUpdate(() => {
+              window.scrollTo(0, coords.y)
+            })
+            .start()
         }
       }
+
+      //下面的代码是引入了一个库，tween来实现动画效果
     </script>
   </body>
 </html>
