@@ -85,7 +85,18 @@ h1,h2,h3,h4,h5,h6 {
   display: block;
   position: relative;
 }
-.topNavBar nav > ul > li.active > a::after,
+.topNavBar nav > ul > li.active > a::after{
+  content:'';
+  display: block;
+  position: absolute;
+  top:100%;
+  left:0;
+  width: 100%;
+  background: #0a5598;
+  height: 3px;
+  animation: menuSlide 0.3s;
+}
+
 .topNavBar nav > ul > li > a:hover::after{
   content:'';
   display: block;
