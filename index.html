@@ -240,8 +240,21 @@
           let a =x.currentTarget
           let href=a.getAttribute('href')//得到的是#siteAbout
           let element=document.querySelector(href)//这个api已收藏
-          let top =element.offsetTop
-          window.scrollTo(0, top-80)//这些api都要自己去了解的
+          let top =element.offsetTop//这个offset属性还挺重要的，在mdn上没有找到
+          let n=30//一共动多少次
+          let interval = 500/n
+          let currentTop = window.scrollY
+          let targetTop = top-80
+          let perDistance = (targetTop - currentTop)/n
+          let count= 0
+          let id= setInterval(() => {
+            if(count===n){ 
+              window.clearInterval(id)
+              return
+              } 
+            count=count+1
+            window.scrollTo(0, currentTop + count * perDistance)//这些api都要自己去了解的
+          }, interval);
         }
       }
     </script>
