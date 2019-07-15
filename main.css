@@ -43,7 +43,6 @@ h1,h2,h3,h4,h5,h6 {
 
 }
 
-
 .topNavBar {
   padding-top: 21px;
   padding-bottom: 21px;
@@ -317,6 +316,7 @@ section.skills .progressBar {
   background: #a7d0f5;
   border-radius: 3px;
   margin: 4px 0 40px;
+  overflow: hidden;
 }
 
 section.skills .progressBar .progress {
@@ -324,7 +324,14 @@ section.skills .progressBar .progress {
   background: #0a5598;
   width: 70%;
   border-radius: 3px;
+  transform: translateX(0);
+  transition: all 1s;
+
 }
+section.skills.offSet .progress{
+  transform: translateX(-100%);
+}
+
 section.portfolio > nav > ol > li {
   float: left;
   margin-left: 40px;
